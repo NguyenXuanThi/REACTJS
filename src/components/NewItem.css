@@ -1,0 +1,17 @@
+.list-container {
+    justify-content: center;
+  }
+
+ul {
+    display: grid; /* Sử dụng grid layout */
+    grid-template-columns: repeat(4, 1fr); /* 3 cột có chiều rộng bằng nhau */
+    grid-template-rows: repeat(3, auto); /* 4 hàng, chiều cao tự động tùy thuộc vào nội dung */
+    gap: 20px; /* Khoảng cách giữa các phần tử */
+    list-style: none; 
+    
+  }
+
+li {
+    flex-direction: column;
+    margin: 0 15px; 
+}
