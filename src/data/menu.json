@@ -1,0 +1,29 @@
+[{
+    "id": 1,
+    "name": "Pho bo",
+    "gia": 50000,
+    "image": "/src/img/ssssss.png",
+    "mota": "ngon ngon ngon"
+},
+{
+    "id": 2,
+    "name": "bun bo",
+    "gia": 50000,
+    "image": "/src/img/ssssss.png",
+    "mota": "ngon ngon ngon"
+},
+{
+    "id": 3,
+    "name": "Banh mi",
+    "gia": 50000,
+    "image": "/src/img/ssssss.png",
+    "mota": "ngon ngon ngon"
+},
+{
+    "id": 4,
+    "name": "cai gi do",
+    "gia": 50000,
+    "image": "/src/img/ssssss.png",
+    "mota": "ngon ngon ngon"
+}
+]
