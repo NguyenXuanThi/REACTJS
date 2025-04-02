@@ -1,0 +1,94 @@
+#root {
+  max-width: fit-content;
+  padding: 2rem;
+}
+
+/* .logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "menu header"
+    "menu content"
+    "menu footer";
+  grid-template-columns: 200px 3fr;
+  grid-template-rows: 70px 200px 400px; /* Đặt chiều cao cho 3 hàng */
+  gap: 2px;
+  background-color: gray;
+  padding: 5px;
+}
+.container > div {
+  background-color: white;
+  padding: 10px;
+}
+.container > div.header {
+  grid-area: header;
+  display: flex; /* Sử dụng Flexbox để xếp các phần tử ngang */
+  justify-content: space-between; /* Tùy chọn: Giữa các phần tử sẽ có khoảng cách */
+  align-items: center;
+  color: brown;
+}
+.input{
+  background-color: white;
+}
+.container > div.menu {
+  grid-area: menu;
+}
+.container > div.content {
+  color: black;
+  grid-area: content;
+}
+.container > div.footer {
+  color: black;
+  grid-area: footer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Để các đường biên của các ô không bị tách rời */
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
