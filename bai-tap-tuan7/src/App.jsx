@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import image from '/src/img/Image 1858.png'; 
+import folder from '/src/img/Folder.png'; 
 function App() {
   const [count, setCount] = useState(0)
 
@@ -11,13 +12,20 @@ function App() {
 <div class="container">
   <div class="header">
     <h2>Dashbroad</h2>
+    <div class = "search">
     <input className='input' type="text" />
+    <img src="/src/img/Bell 1.png" alt="" />
+    <img src="/src/img/Question 1.png" alt="" />
+    <img src="/src/img/Avatar 313.png" alt="" />
+    </div>
     </div>
   <div class="menu">
     <img src={image} alt="" />
     <br/>
+    
     <a href="#">Dashboard</a>
     <br/>
+    <img src={folder} alt="" width= "25" height="25"/>
     <a href="#">Projects</a>
     <br/>
     <a href="#">Teams</a>
