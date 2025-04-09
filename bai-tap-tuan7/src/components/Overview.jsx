@@ -16,7 +16,10 @@ const Overview = () => {
 
   return (
     <div className="overview-container">
-        <h4 className="title">Overview</h4>
+       <div className="tieude">
+       <img src="/src/img/Squares four 1.png" alt="" width="25" height="25"/>
+       <h4 className="title">Detailed report</h4>
+       </div>
       <div className="overview-grid">
         <div className="card card-turnover">
           <div className="card-header">

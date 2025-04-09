@@ -55,7 +55,8 @@
     color: #155724;
   }
 
-  .title{
-    margin-top: 0%;
+  .tieude{
+    display: flex;
+    gap: 20px;
   }
   

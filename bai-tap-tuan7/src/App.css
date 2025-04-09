@@ -8,7 +8,7 @@
   grid-template-areas:
     "menu header"
     "menu content"
-    "menu footer";
+    "menu content";
   grid-template-columns: 300px 1590px;
   grid-template-rows: 70px 250px 600px; /* Đặt chiều cao cho 3 hàng */
   gap: 2px;

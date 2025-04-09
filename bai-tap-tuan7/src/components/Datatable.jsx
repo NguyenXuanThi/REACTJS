@@ -6,7 +6,10 @@ import data from '../data/Datatable.json';
 const Datatable = () => {
   return (
     <div className="datatable">
-      <h4 className="title">Detailed report</h4>
+       <div className="tieude">
+       <img src="/src/img/File text 1.png" alt="" width="25" height="25"/>
+       <h4 className="title">Detailed report</h4>
+       </div>
       <table>
         <thead>
           <tr>
