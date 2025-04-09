@@ -24,32 +24,39 @@ function App() {
         </div>
       </div>
 
+
       <div className="menu">
-        <img src={image} alt="Logo" />
-        <NavLink to="/" className="nav-item logo2">
-          <img src="/src/img/Squares four 1.png" width="25" height="25" alt="Dashboard" />
-          <span className="linknav">Dashboard</span>
-        </NavLink>
-        <NavLink to="/projects" className="nav-item">
-          <img src={folder} width="25" height="25" alt="Projects" />
-          <span className="linknav">Projects</span>
-        </NavLink>
-        <NavLink to="/teams" className="nav-item">
-          <img src="/src/img/Groups.png" width="25" height="25" alt="Teams" />
-          <span className="linknav">Teams</span>
-        </NavLink>
-        <NavLink to="/analytics" className="nav-item">
-          <img src="/src/img/Pie chart.png" width="25" height="25" alt="Analytics" />
-          <span className="linknav">Analytics</span>
-        </NavLink>
-        <NavLink to="/messages" className="nav-item">
-          <img src="/src/img/Chat.png" width="25" height="25" alt="Messages" />
-          <span className="linknav">Messages</span>
-        </NavLink>
-        <NavLink to="/integrations" className="nav-item">
-          <img src="/src/img/Code.png" width="25" height="25" alt="Integrations" />
-          <span className="linknav">Integrations</span>
-        </NavLink>
+      <img src={image} alt="Logo" />
+      <NavLink to="/" className={({ isActive }) => `nav-item logo2${isActive ? " active" : ""}`}>
+        <img src="/src/img/Squares four 1.png" width="25" height="25" alt="Dashboard" />
+        <span className="linknav">Dashboard</span>
+      </NavLink>
+
+      <NavLink to="/projects" className={({ isActive }) => `nav-item${isActive ? " active" : ""}`}>
+        <img src={folder} width="25" height="25" alt="Projects" />
+        <span className="linknav">Projects</span>
+      </NavLink>
+
+      <NavLink to="/teams" className={({ isActive }) => `nav-item${isActive ? " active" : ""}`}>
+        <img src="/src/img/Groups.png" width="25" height="25" alt="Teams" />
+        <span className="linknav">Teams</span>
+      </NavLink>
+
+      <NavLink to="/analytics" className={({ isActive }) => `nav-item${isActive ? " active" : ""}`}>
+        <img src="/src/img/Pie chart.png" width="25" height="25" alt="Analytics" />
+        <span className="linknav">Analytics</span>
+      </NavLink>
+
+      <NavLink to="/messages" className={({ isActive }) => `nav-item${isActive ? " active" : ""}`}>
+        <img src="/src/img/Chat.png" width="25" height="25" alt="Messages" />
+        <span className="linknav">Messages</span>
+      </NavLink>
+
+      <NavLink to="/integrations" className={({ isActive }) => `nav-item${isActive ? " active" : ""}`}>
+        <img src="/src/img/Code.png" width="25" height="25" alt="Integrations" />
+        <span className="linknav">Integrations</span>
+      </NavLink>
+
         <div className='GroupCha'>
           <img src="/src/img/Group.png" alt="" />
           <h4>V2.0 is available</h4>

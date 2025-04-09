@@ -75,3 +75,9 @@
 .GroupCha button{
   margin-bottom: 20px;
 }
+
+.active {
+  background-color: chartreuse;
+  border-radius: 8px;
+}
+
