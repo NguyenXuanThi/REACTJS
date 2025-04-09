@@ -3,6 +3,7 @@ import './App.css'
 import image from '/src/img/Image 1858.png'; 
 import folder from '/src/img/Folder.png'; 
 import Datatable from './components/Datatable';
+import Overview from './components/Overview';
 function App() {
   const [count, setCount] = useState(0)
 
@@ -61,8 +62,7 @@ function App() {
 
   
   <div class="content">
-    <h4>Overview</h4>
-   
+    <Overview /> 
   </div>
 
   <div class='footer'>
