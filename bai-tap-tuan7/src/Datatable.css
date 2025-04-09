@@ -1,0 +1,61 @@
+.datatable {
+    font-family: Arial, sans-serif;
+    margin-top: 0%;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  thead {
+    background-color: #f4f6f8;
+  }
+  
+  th, td {
+    padding: 15px;
+    text-align: left;
+  }
+  
+  .customer-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .customer-info img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
+  
+  .status {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  
+  .status.new {
+    background-color: #e0f3ff;
+    color: #0a8ce3;
+  }
+  
+  .status.in-progress {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  
+  .status.completed {
+    background-color: #d4edda;
+    color: #155724;
+  }
+
+  .title{
+    margin-top: 0%;
+  }
+  
