@@ -74,4 +74,17 @@
     padding: 20px;
     border-radius: 5px;
   }
+
+  .downup {
+    display: flex; 
+    align-items: center; 
+    padding: 10px 20px; 
+    border: 2px solid pink;
+    background-color: white;
+    cursor: pointer; 
+    color: pink;
+  }
   
+ .downup img {
+    margin-right: 10px; 
+  }

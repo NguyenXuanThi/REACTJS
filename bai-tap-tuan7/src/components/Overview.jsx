@@ -7,18 +7,16 @@ const Overview = () => {
   const [customers, setCustomers] = useState(0);
 
   useEffect(() => {
-    // Gọi API để lấy dữ liệu từ json-server
     fetch("http://localhost:3000/users")
       .then((res) => res.json())
       .then((data) => {
-        // Tính toán tổng doanh thu (turnover) từ giá trị "value"
         const totalTurnover = data.reduce(
           (acc, item) => acc + parseFloat(item.value.replace("$", "").replace(",", "")), 
           0
         );
         setTurnover(totalTurnover);
-        setProfit(totalTurnover * 0.35); // Lợi nhuận = 35% của doanh thu
-        setCustomers(data.length); // Số lượng khách hàng là số phần tử trong data
+        setProfit(totalTurnover * 0.35); 
+        setCustomers(data.length); 
       })
       .catch((err) => console.error("Fetch error:", err));
   }, []);
@@ -27,7 +25,7 @@ const Overview = () => {
     <div className="overview-container">
       <div className="tieude">
         <img src="/src/img/Squares four 1.png" alt="" width="25" height="25" />
-        <h4 className="title">Detailed report</h4>
+        <h4 className="title">Overview</h4>
       </div>
       <div className="overview-grid">
         <div className="card card-turnover">
