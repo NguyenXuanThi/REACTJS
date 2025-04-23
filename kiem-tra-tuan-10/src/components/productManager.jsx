@@ -104,6 +104,14 @@ const ProductManager = () => {
 
       <h3 className="text-xl font-semibold mb-2">Danh sách sản phẩm</h3>
       <ProductList products={filteredProducts} onDelete={handleDelete} />
+      <h3 className="text-xl font-semibold mb-2">Danh sách sản phẩm</h3>
+      <ProductList products={filteredProducts} onDelete={handleDelete} />
+
+      {/* 🔢 Tổng số sản phẩm và tổng tồn kho */}
+      <div className="mt-4 p-4 border rounded bg-gray-50 text-sm text-gray-700">
+        Tổng sản phẩm: <strong>{filteredProducts.length}</strong> | 
+        Tổng tồn kho: <strong>{filteredProducts.reduce((acc, p) => acc + p.stock, 0)}</strong>
+      </div>
     </div>
   );
 };
