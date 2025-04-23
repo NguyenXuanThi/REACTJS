@@ -27,6 +27,7 @@ const ProductManager = () => {
   });
 
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('');
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -55,8 +56,10 @@ const ProductManager = () => {
     setProducts(updated);
   };
 
-  const filteredProducts = products.filter((product) =>
-    product.name.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredProducts = products.filter(
+    (product) =>
+      product.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
+      (selectedCategory === '' || product.category === selectedCategory)
   );
 
   return (
@@ -81,6 +84,22 @@ const ProductManager = () => {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
+      </div>
+
+      {/* 🔽 Dropdown lọc danh mục */}
+      <div className="mb-6">
+        <label className="block mb-1 font-medium">Lọc theo danh mục:</label>
+        <select
+          value={selectedCategory}
+          onChange={(e) => setSelectedCategory(e.target.value)}
+          className="p-2 border rounded w-full"
+        >
+          <option value="">Tất cả</option>
+          <option value="Thời trang">Thời trang</option>
+          <option value="Công nghệ">Công nghệ</option>
+          <option value="Gia dụng">Gia dụng</option>
+          <option value="Nội thất">Nội thất</option>
+        </select>
       </div>
 
       <h3 className="text-xl font-semibold mb-2">Danh sách sản phẩm</h3>
