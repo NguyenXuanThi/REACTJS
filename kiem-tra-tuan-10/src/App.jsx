@@ -4,12 +4,12 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 import React from 'react';
-import ProductList from '/src/components/ProductList';
-
+import ProductList from '/src/components/productList';
+import ProductManager from '/src/components/productManager';
 function App() {
   return (
     <div>
-      <ProductList />
+      <ProductManager />
     </div>
   );
 }
