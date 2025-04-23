@@ -8,6 +8,7 @@ import authReducer from './authSlice';
 import usersReducer from './usersSlice';
 import formReducer from './formSlice';
 import eventReducer from './eventSlice';
+import productReducer from './productSlice';
 const store = configureStore({
   reducer: {
     counter: counterReducer, 
@@ -19,6 +20,7 @@ const store = configureStore({
     counter2: counterReducer2,
     form: formReducer,
     event: eventReducer,
+    product: productReducer,
   },
 });
 
