@@ -1,5 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import counterReducer from './counterSlice';
+import counterReducer2 from './counterSlice2';
 import todoReducer from './todoSlice';
 import themeReducer from './themeSlice';
 import cartReducer from './cartSlice';
@@ -13,6 +14,7 @@ const store = configureStore({
     cart: cartReducer,
     auth: authReducer,
     users: usersReducer,
+    counter2: counterReducer2,
   },
 });
 
