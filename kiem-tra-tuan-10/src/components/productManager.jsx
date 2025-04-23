@@ -1,8 +1,7 @@
-// src/ProductManager.jsx
 import React, { useState } from 'react';
 import ProductList from '/src/components/productList';
 
-const productManager = () => {
+const ProductManager = () => {
   const [products, setProducts] = useState([
     {
       id: 1,
@@ -10,6 +9,13 @@ const productManager = () => {
       price: 150000,
       category: 'Thời trang',
       stock: 20,
+    },
+    {
+      id: 2,
+      name: 'Laptop HP Pavilion',
+      price: 14500000,
+      category: 'Công nghệ',
+      stock: 5,
     },
   ]);
 
@@ -19,6 +25,8 @@ const productManager = () => {
     category: '',
     stock: '',
   });
+
+  const [searchTerm, setSearchTerm] = useState('');
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -43,9 +51,13 @@ const productManager = () => {
   };
 
   const handleDelete = (id) => {
-    const updated = products.filter(p => p.id !== id);
+    const updated = products.filter((p) => p.id !== id);
     setProducts(updated);
   };
+
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div className="p-4 max-w-3xl mx-auto">
@@ -60,10 +72,21 @@ const productManager = () => {
         Thêm sản phẩm
       </button>
 
+      {/* 🔍 Ô tìm kiếm */}
+      <div className="mb-4">
+        <input
+          type="text"
+          className="p-2 border rounded w-full"
+          placeholder="Tìm kiếm sản phẩm theo tên..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+      </div>
+
       <h3 className="text-xl font-semibold mb-2">Danh sách sản phẩm</h3>
-      <ProductList products={products} onDelete={handleDelete} />
+      <ProductList products={filteredProducts} onDelete={handleDelete} />
     </div>
   );
 };
 
-export default productManager;
+export default ProductManager;
