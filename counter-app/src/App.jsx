@@ -7,67 +7,52 @@ import { login, logout } from '/src/components/authSlice';
 import { fetchUsers } from '/src/components/usersSlice';
 import { increment as increment2, incrementByAmount, reset } from '/src/components/counterSlice2.jsx';
 import { updateInput, calculateBMI, calculateTax } from '/src/components/formSlice.jsx';
+import { addEvent, editEvent, deleteEvent } from '/src/components/eventSlice';
 import './App.css';
 
 export default function App() {
+  const events = useSelector(state => state.event.events);
   const dispatch = useDispatch();
-  const { weight, height, income, bmiResult, taxResult } = useSelector(state => state.form);
+
+  const [form, setForm] = useState({ id: '', name: '', date: '' });
+  const [isEdit, setIsEdit] = useState(false);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    dispatch(updateInput({ field: name, value: parseFloat(value) }));
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleCalculateBMI = () => {
-    dispatch(calculateBMI());
+  const handleAddOrEdit = () => {
+    if (isEdit) {
+      dispatch(editEvent({ id: form.id, newData: { name: form.name, date: form.date } }));
+    } else {
+      dispatch(addEvent({ ...form, id: Date.now().toString() }));
+    }
+    setForm({ id: '', name: '', date: '' });
+    setIsEdit(false);
   };
 
-  const handleCalculateTax = () => {
-    dispatch(calculateTax());
+  const handleEditClick = (event) => {
+    setForm(event);
+    setIsEdit(true);
   };
 
   return (
-    <div style={{ padding: 40, textAlign: 'center' }}>
-      <h2>🧮 Form Tính Toán</h2>
+    <div className="App">
+      <h2>📅 Event Management</h2>
 
-      <div>
-        <label>Cân nặng (kg): </label>
-        <input
-          type="number"
-          name="weight"
-          value={weight}
-          onChange={handleChange}
-        />
-      </div>
-      <div>
-        <label>Chiều cao (m): </label>
-        <input
-          type="number"
-          name="height"
-          value={height}
-          onChange={handleChange}
-        />
-      </div>
-      <button onClick={handleCalculateBMI}>Tính BMI</button>
+      <input name="name" placeholder="Event name" value={form.name} onChange={handleChange} />
+      <input name="date" placeholder="Event date" value={form.date} onChange={handleChange} />
+      <button onClick={handleAddOrEdit}>{isEdit ? 'Update' : 'Add'} Event</button>
 
-      <div>
-        <h3>Kết quả BMI: {bmiResult !== null ? bmiResult.toFixed(2) : 'Chưa tính toán'}</h3>
-      </div>
-
-      <div>
-        <label>Thu nhập: </label>
-        <input
-          type="number"
-          name="income"
-          value={income}
-          onChange={handleChange}
-        />
-      </div>
-      <button onClick={handleCalculateTax}>Tính Thuế</button>
-
-      <div>
-        <h3>Kết quả thuế: {taxResult !== null ? taxResult : 'Chưa tính toán'}</h3>
-      </div>
+      <ul>
+        {events.map(event => (
+          <li key={event.id}>
+            {event.name} - {event.date}
+            <button onClick={() => handleEditClick(event)}>Edit</button>
+            <button onClick={() => dispatch(deleteEvent(event.id))}>Delete</button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

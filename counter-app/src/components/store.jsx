@@ -7,6 +7,7 @@ import cartReducer from './cartSlice';
 import authReducer from './authSlice';
 import usersReducer from './usersSlice';
 import formReducer from './formSlice';
+import eventReducer from './eventSlice';
 const store = configureStore({
   reducer: {
     counter: counterReducer, 
@@ -17,6 +18,7 @@ const store = configureStore({
     users: usersReducer,
     counter2: counterReducer2,
     form: formReducer,
+    event: eventReducer,
   },
 });
 
