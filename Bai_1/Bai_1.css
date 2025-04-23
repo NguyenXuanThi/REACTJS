@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    color: #e63946;
+    margin-right: auto;
+}
+
+.search-box {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+nav a {
+    margin-left: 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+nav a.recipe-box {
+    background-color: #e63946;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.container {
+    display: flex;
+    margin: 20px;
+}
+
+aside {
+    width: 250px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    flex-grow: 1;
+    padding: 15px;
+    margin-left: 15px;
+}
+
+main h2 {
+    color: #e63946;
+}
+
+.icon-message {
+    display: flex;
+    align-items: center;
+}
+
+.icon-message img {
+    margin-right: 15px;
+}
+
+.suggestions span {
+    background-color: #81b29a;
+    border-radius: 15px;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-info {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.apply-button {
+    display: block;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #d62839;
+}
