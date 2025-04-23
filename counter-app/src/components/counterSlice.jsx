@@ -1,4 +1,3 @@
-// src/counterSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
 const counterSlice = createSlice({
@@ -14,8 +13,5 @@ const counterSlice = createSlice({
   },
 });
 
-// Export các action để sử dụng trong component
 export const { increment, decrement } = counterSlice.actions;
-
-// Export reducer để cấu hình store
 export default counterSlice.reducer;

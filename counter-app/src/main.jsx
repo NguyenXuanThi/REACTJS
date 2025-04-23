@@ -7,7 +7,7 @@ import store from '/src/components/store.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Provider store={store}> {/* Cung cấp store cho toàn bộ ứng dụng */}
+    <Provider store={store}> 
       <App />
     </Provider>
   </StrictMode>
