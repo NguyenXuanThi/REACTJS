@@ -1,0 +1,7 @@
+.container {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    height: 100vh; /* Chiều cao của container chiếm toàn bộ màn hình */
+    padding: 20px; /* Optional, nếu bạn muốn thêm khoảng cách bên ngoài */
+  }
