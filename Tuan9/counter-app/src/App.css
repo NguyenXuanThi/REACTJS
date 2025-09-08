@@ -1,0 +1,32 @@
+#root {
+  max-width: fit-content;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: gray;
+  border-radius: 15px;
+}
+
+
+.count{
+  background-color: teal;
+  border-radius: 15px;
+  padding: 50px;
+}
+
+.app {
+  display: flex;
+  text-align: center;
+  padding: 40px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.light {
+  background: white;
+  color: black;
+}
+
+.dark {
+  background: #1e1e1e;
+  color: white;
+}
