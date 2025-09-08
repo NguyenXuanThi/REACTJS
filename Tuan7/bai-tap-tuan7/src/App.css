@@ -1,0 +1,83 @@
+/* #root {
+  max-width: max-content;
+  padding: 2rem;
+} */
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "menu header"
+    "menu content"
+    "menu content";
+  grid-template-columns: 300px 1590px;
+  grid-template-rows: 70px 250px 600px; /* Đặt chiều cao cho 3 hàng */
+  gap: 2px;
+  background-color: gray;
+  /* padding: 5px; */
+}
+.container > div {
+  background-color: white;
+  padding: 10px;
+}
+.container > div.header {
+  grid-area: header;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  color: brown;
+}
+
+.search{
+  display: flex;
+  gap: 20px;
+}
+.input{
+  background-color: white;
+}
+.container > div.menu {
+  grid-area: menu;
+}
+.container > div.content {
+  color: black;
+  grid-area: content;
+  margin-top: 0px;
+}
+.container > div.footer {
+  color: black;
+  grid-area: footer;
+}
+
+.logo2{
+  margin-top: 20px;
+}
+.nav-item { 
+  margin-bottom: 20px;
+  margin-left: 20px;
+  display: flex;
+  gap: 10px;
+}
+.linknav{
+  color: gray;
+  font-size: 18px;
+  text-decoration: none;
+}
+.GroupCha{
+  background-color: aqua;
+  margin-top: 100px;
+  border-radius: 8px;
+  color: black;
+  text-align: center;
+}
+.GroupCha img{
+  margin-top: 20px;
+}
+
+.GroupCha button{
+  margin-bottom: 20px;
+}
+
+.active {
+  background-color: chartreuse;
+  border-radius: 8px;
+}
+
